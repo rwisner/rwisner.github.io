@@ -1,3 +1,17 @@
+<!DOCTYPE html>
 <html>
-<h1>Hello World</h1>
+  <head>
+    <script>
+      function helloDay() {
+        var dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        var dateToday = new Date();
+        var dayIndex = dateToday.getDay();
+        var dayName = dayNames[dayIndex]
+        document.getElementById("dayID").innerHTML = dayName;
+      }
+    </script>
+  </head>
+  <body onload="helloDay()">
+    <h1>Hello <span id="dayID">World</span></h1>
+  </body>
 </html>
