@@ -1,0 +1,14 @@
+.headline {
+  color: blue;
+}
+
+.box {
+  border-style: dashed;
+  border-color: lightgreen;
+  border-width: 5px;
+  background-color: green;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  width: 300px;
+  height: 100px;
+}
