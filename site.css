@@ -1,8 +1,3 @@
-body {
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-}
-
 .headline {
   color: blue;
 }
@@ -76,41 +71,45 @@ body {
   clear: left;
 }
 
-/* .outer_container {
-  width: 680px;
-} */
+/********************************/
+/*  styles for final about page */
+/********************************/
+
+
+body {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
 
 .name_container {
   background-color: red;
-  width: 380px;
-  height: 380px;
-  /* margin: auto; */
+  width: 384px;
+  height: 384px;
 }
 
 .content_container {
   background-color: yellow;
-  max-width: 760px;
-  /* margin: auto; */
-  /* width: 100%; */
+  max-width: 768px;
 }
 
 .image_container {
   background-color: green;
-  width: 380px;
-  height: 380px;
+  min-width: 375px;
+  width: 384px;
+  height: 384px;
   float: left;
 }
 
 .bio_container {
   background-color: blue;
-  width: 380px;
-  height: 380px;
+  min-width: 375px;
+  width: 384px;
+  height: 384px;
   float: left;
 }
 
 .news_container {
   background-color: orange;
-  width: 380px;
-  height: 380px;
-  /* margin: auto; */
+  width: 384px;
+  height: 384px;
 }
