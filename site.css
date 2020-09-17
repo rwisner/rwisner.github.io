@@ -84,6 +84,7 @@ body {
 .name_container {
   background-color: red;
   width: 384px;
+  min-width: 375px;
   height: 384px;
 }
 
@@ -94,7 +95,6 @@ body {
 
 .image_container {
   background-color: green;
-  min-width: 375px;
   width: 384px;
   height: 384px;
   float: left;
@@ -111,5 +111,6 @@ body {
 .news_container {
   background-color: orange;
   width: 384px;
+  min-width: 375px;
   height: 384px;
 }
