@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class 10</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="site.css">
+
+    <script>
+
+      window.onload = function() {
+        // functions that run after page loads
+      }
+
+      // display good morning, afternoon or evening based on the time
+      function displayGreeting() {
+        var date = new Date();
+        var hour = date.getHours();
+      }
+
+      // get weather data from openweathermap and display the current temp
+      function fetchWeather() {
+        fetch('OPENWEATHERMAP_URL_HERE')
+        .then(function(resp) { return resp.json() })
+        .then(function(data) {
+          document.getElementById('weather').innerHTML = data.main.temp;
+        })
+        .catch(function() {
+          document.getElementById('weather').innerHTML = "Error in fetchWeather function";
+        });
+      }
+
+    </script>
+
+  </head>
+  <body>
+
+
+
+  </body>
+</html>
