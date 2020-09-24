@@ -9,23 +9,34 @@
 
       window.onload = function() {
         // functions that run after page loads
+        displayGreeting();
+        fetchWeather();
       }
 
       // display good morning, afternoon or evening based on the time
       function displayGreeting() {
         var date = new Date();
         var hour = date.getHours();
+        var description = "";
+        if (hour < 12) {
+          description = "morning";
+        } else if (hour < 17) {
+          description = "afternoon";
+        } else {
+          description = "evening";
+        }
+        document.getElementById("greeting").innerHTML = "Good " + description;
       }
 
       // get weather data from openweathermap and display the current temp
       function fetchWeather() {
-        fetch('OPENWEATHERMAP_URL_HERE')
+        fetch("https://api.openweathermap.org/data/2.5/weather?zip=ZIPCODEHERE,US&appid=APICODEHERE&units=imperial")
         .then(function(resp) { return resp.json() })
         .then(function(data) {
-          document.getElementById('weather').innerHTML = data.main.temp;
+          document.getElementById("weather").innerHTML = data.main.temp;
         })
         .catch(function() {
-          document.getElementById('weather').innerHTML = "Error in fetchWeather function";
+          document.getElementById("weather").innerHTML = "Error in fetchWeather function";
         });
       }
 
@@ -34,7 +45,8 @@
   </head>
   <body>
 
-
+    <div id="greeting"></div>
+    <div id="weather"></div>
 
   </body>
 </html>
