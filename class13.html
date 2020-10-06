@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class 13</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="site.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <script>
+
+      window.onload = function() {
+        // functions that run after page loads
+        var mymap = drawMap();
+        listSheet(mymap);
+      }
+
+      function drawMap() {
+        // draw a map using leafletjs and tiles from mapbox
+        var mymap = L.map('mapid').setView([32.221041, -110.971143], 15);
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1Ijoicndpc25lciIsImEiOiJja2Z0NHdhdWswajd3MnpzM2I0eTdtYno2In0.G05k0rVVGf3uNeAPquvUnw'
+        }).addTo(mymap);
+        return mymap;
+      }
+
+      function addPin(mymap, lat, lon, name) {
+        L.marker([lat, lon]).addTo(mymap).bindPopup(name);
+      }
+
+      function listSheet(mymap) {
+        // list google sheet rows
+        fetch('https://api.sheetson.com/v2/sheets/Sheet1?no-cache=true', {
+          withCredentials: true,
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer 57sM40YM3d0TqVAsf6e4kyiG-CsXYPp2J2vobn-Nh4-dCW_vZ7to1VAmLlCmQg',
+            'X-Sheetson-Spreadsheet-Id': '1TiC_Y3SzuGTT0uaNlfo0Q_VAjH0Uujv1ucHOVb44s5g'
+          }
+        })
+        .then(function(resp) { return resp.json() })
+        .then(function(data) {
+          for (var i = 0; i < data.results.length; i++) {
+            var result = data.results[i];
+            let divElement = '<div class="cell">' + '<div class="cell_name">' + result.name + '</div>' + '<div class="cell_address">' + result.address + '</div>' + '<div class="cell_url"><a href="' + result.url + '">' + result.url + '</a></div>' + '<div class="cell_phone"><a href="tel://' + result.phone + '">' + result.phone + '</a></div>' + '</div>';
+            document.getElementById("sheet").innerHTML += divElement;
+
+            // add pins to mymap for each location
+            addPin(mymap, result.lat, result.lon, '<strong>' + result.name + '</strong>');
+          }
+        })
+        .catch(function() {
+          document.getElementById("sheet").innerHTML = "Error in listSheet function";
+        });
+      }
+
+    </script>
+  </head>
+  <body>
+    <h2>COVID-19 Testing Locations</h2>
+    <div id="mapid"></div>
+    <div id="sheet"></div>
+  </body>
+</html>
