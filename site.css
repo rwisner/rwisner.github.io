@@ -146,3 +146,51 @@ img {
   font-size: 2em;
   margin: 1em;
 }
+
+#rss_items {
+  border: 1px solid black;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+}
+
+.rss_title {
+  font-size: 1.2em;
+}
+
+.rss_description {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+#sheet {
+  width: 640px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  border: 1px solid black;
+  padding: 5px 5px 5px 5px;
+  margin: 10px 10px 10px 10px;
+}
+
+.cell_name {
+  font-weight: bold;
+}
+
+.cell_address {
+
+}
+
+.cell_url {
+
+}
+
+.cell_phone {
+
+}
+
+#mapid {
+  height: 640px;
+  width: 640px;
+  border: 2px solid blue;
+}
