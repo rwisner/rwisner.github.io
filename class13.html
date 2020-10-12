@@ -25,7 +25,7 @@
             id: 'mapbox/streets-v11',
             tileSize: 512,
             zoomOffset: -1,
-            accessToken: 'pk.eyJ1Ijoicndpc25lciIsImEiOiJja2Z0NHdhdWswajd3MnpzM2I0eTdtYno2In0.G05k0rVVGf3uNeAPquvUnw'
+            accessToken: 'pk.eyJ1Ijoicndpc25lciIsImEiOiJja2c3NmNoczEwNGE1MnNwZ2g3MnA0MnkxIn0.BOCFgqReYmB0NR4lpTkpEg'
         }).addTo(mymap);
         return mymap;
       }
@@ -52,7 +52,7 @@
             document.getElementById("sheet").innerHTML += divElement;
 
             // add pins to mymap for each location
-            addPin(mymap, result.lat, result.lon, '<strong>' + result.name + '</strong>');
+            addPin(mymap, result.lat, result.lon, '<strong>' + result.name + '</strong><br>' + result.hours);
           }
         })
         .catch(function() {
