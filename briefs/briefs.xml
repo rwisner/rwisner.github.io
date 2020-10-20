@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-
   <title>Smart Speaker Class</title>
   <link>https://rwisner.github.io/about.html</link>
   <description>Class Description</description>
-
   <item>
     <pubDate>Mon, 19 Oct 2020 09:00:00 -0700</pubDate>
     <title>Class 17</title>
@@ -14,7 +12,6 @@
     <enclosure url="https://rwisner.github.io/briefs/class17.m4a" type="audio/mpeg" length="57729"></enclosure>
     <guid isPermaLink="false">https://rwisner.github.io/briefs/class17.m4a</guid>
   </item>
-
   <item>
     <pubDate>Wed, 14 Oct 2020 09:00:00 -0700</pubDate>
     <title>Class 16</title>
@@ -23,6 +20,5 @@
     <enclosure url="https://rwisner.github.io/briefs/class16.m4a" type="audio/mpeg" length="64265"></enclosure>
     <guid isPermaLink="false">https://rwisner.github.io/briefs/class16.m4a</guid>
   </item>
-
 </channel>
 </rss>
