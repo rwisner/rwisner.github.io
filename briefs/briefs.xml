@@ -3,8 +3,6 @@
 <channel>
   <title>Smart Speaker App Class</title>
   <link>https://rwisner.github.io/about.html</link>
-  <atom:link href="https://rwisner.github.io/briefs/briefs.xml" rel="self" type="application/rss+xml" />
-
   <description>Flash Briefing</description>
   <item>
     <pubDate>Mon, 19 Oct 2020 09:00:00 -0700</pubDate>
