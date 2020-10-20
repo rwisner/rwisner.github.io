@@ -7,16 +7,16 @@
   <item>
     <pubDate>Tue, 20 Oct 2020 09:00:00 -0700</pubDate>
     <title>Class 17</title>
-    <link>https://www.w3schools.com/xml/xml_rss.asp</link>
+    <link>https://rwisner.github.io/about.html</link>
     <description>Class 17 description</description>
-    <enclosure url="http://rwisner.github.io/briefs/class17.m4a" type="audio/mpeg"></enclosure>
+    <enclosure url="https://rwisner.github.io/briefs/class17.m4a" type="audio/mpeg"></enclosure>
   </item>
   <item>
     <pubDate>Thu, 15 Oct 2020 09:00:00 -0700</pubDate>
     <title>Class 16</title>
-    <link>https://www.w3schools.com/xml</link>
+    <link>https://rwisner.github.io/about.html</link>
     <description>Class 16 description</description>
-    <enclosure url="http://rwisner.github.io/briefs/class16.m4a" type="audio/mpeg"></enclosure>
+    <enclosure url="https://rwisner.github.io/briefs/class16.m4a" type="audio/mpeg"></enclosure>
   </item>
 </channel>
 </rss>
