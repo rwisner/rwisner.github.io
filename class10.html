@@ -30,10 +30,10 @@
 
       // get weather data from openweathermap and display the current temp
       function fetchWeather() {
-        fetch("https://api.openweathermap.org/data/2.5/weather?zip=ZIPCODEHERE,US&appid=APICODEHERE&units=imperial")
+        fetch("https://api.openweathermap.org/data/2.5/weather?zip=85701,US&appid=fcd04532bf8ea811e058a40f1b78cce2&units=imperial")
         .then(function(resp) { return resp.json() })
         .then(function(data) {
-          document.getElementById("weather").innerHTML = data.main.temp;
+          document.getElementById("weather").innerHTML = "It is currently " + data.main.temp + "&deg; in " + data.name;
         })
         .catch(function() {
           document.getElementById("weather").innerHTML = "Error in fetchWeather function";

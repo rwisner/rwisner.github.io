@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class 12</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="site.css">
+    <script>
+
+      window.onload = function() {
+        // functions that run after page loads
+        listSheet();
+      }
+
+      function listSheet() {
+        // list google sheet rows
+        fetch('https://api.sheetson.com/v2/sheets/Sheet1', {
+          withCredentials: true,
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer 57sM40YM3d0TqVAsf6e4kyiG-CsXYPp2J2vobn-Nh4-dCW_vZ7to1VAmLlCmQg',
+            'X-Sheetson-Spreadsheet-Id': '1TiC_Y3SzuGTT0uaNlfo0Q_VAjH0Uujv1ucHOVb44s5g'
+          }
+        })
+        .then(function(resp) { return resp.json() })
+        .then(function(data) {
+          for (var i = 0; i < data.results.length; i++) {
+            var result = data.results[i];
+            let divElement = '<div class="cell">' + '<div class="cell_name">' + result.name + '</div>' + '<div class="cell_address">' + result.address + '</div>' + '<div class="cell_url"><a href="' + result.url + '">' + result.url + '</a></div>' + '<div class="cell_phone"><a href="tel://' + result.phone + '">' + result.phone + '</a></div>' + '</div>';
+            document.getElementById("sheet").innerHTML += divElement;
+          }
+        })
+        .catch(function() {
+          document.getElementById("sheet").innerHTML = "Error in listSheet function";
+        });
+      }
+
+    </script>
+
+  </head>
+  <body>
+
+    <h2>LIST_TITLE_HERE</h2>
+    <div id="sheet"></div>
+
+  </body>
+</html>
