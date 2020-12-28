@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class 11</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="site.css">
+    <script src="https://storage.googleapis.com/feednami-static/js/feednami-client-v1.0.1.js"></script>
+    <script>
+
+      window.onload = function() {
+        // functions that run after page loads
+        displayRSSFeed();
+      }
+
+      function displayRSSFeed() {
+        // fetch an RSS feed and display the title and description
+        var origURL = 'https://www.niemanlab.org/feed/';
+        // feednami doesn't like & so replace with %26
+        var replacedURL = origURL.replace(/&/g, "%26");
+        feednami.load(replacedURL,function(result) {
+          if (result.error) {
+            console.log(result.error);
+          } else {
+            var entries = result.feed.entries
+            for (var i = 0; i < entries.length; i++) {
+              var entry = entries[i];
+              let divElement = '<div class="rss_title"><a href="' + entry.link + '" target="_blank">' + entry.title + '</a></div><div class="rss_description">' + entry.description + '</div>';
+              document.getElementById("rss_items").innerHTML += divElement;
+            }
+          }
+        });
+      }
+
+    </script>
+
+  </head>
+  <body>
+
+    <div id="rss_items"></div>
+
+  </body>
+</html>

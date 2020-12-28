@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>The Smart Speaker Class</title>
+  <link>https://rwisner.github.io/about.html</link>
+  <description>Class Description</description>
+  <item>
+    <pubDate>Wed, 21 Oct 2020 09:00:00 -0700</pubDate>
+    <title>Class 18 Summary</title>
+    <link>https://rwisner.github.io/about.html</link>
+    <description>Intro to Google Actions</description>
+    <enclosure url="https://rwisner.github.io/briefs/class18.mp3" type="audio/mpeg" length="90109"></enclosure>
+    <guid isPermaLink="false">https://rwisner.github.io/briefs/class18.mp3</guid>
+  </item>
+  <item>
+    <pubDate>Mon, 19 Oct 2020 09:00:00 -0700</pubDate>
+    <title>Class 17 Summary</title>
+    <link>https://rwisner.github.io/about.html</link>
+    <description>Alexa News Briefs</description>
+    <enclosure url="https://rwisner.github.io/briefs/class17.mp3" type="audio/mpeg" length="108417"></enclosure>
+    <guid isPermaLink="false">https://rwisner.github.io/briefs/class17.mp3</guid>
+  </item>
+</channel>
+</rss>

@@ -1,0 +1,196 @@
+.headline {
+  color: blue;
+}
+
+.box {
+  border-style: dashed;
+  border-color: lightgreen;
+  border-width: 5px;
+  background-color: green;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  width: 300px;
+  height: 100px;
+}
+
+.subhead {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.storybody {
+  font-size: 1.2em;
+}
+
+.copyright {
+  font-style: italic;
+}
+
+.box1 {
+  height: 200px;
+  width: 300px;
+  background-color: red;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.box2 {
+  height: 200px;
+  width: 300px;
+  background-color: green;
+  float: left;
+  margin: 0px 10px 10px 0px;
+}
+
+.box3 {
+  height: 200px;
+  width: 300px;
+  background-color: blue;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.daytitle {
+  background-color: pink;
+  margin-bottom: 10px;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+}
+
+.dayofweek {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: pink;
+  padding: 10px 20px 10px 20px;
+}
+
+.newstitle {
+  background-color: pink;
+  margin-bottom: 10px;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+}
+
+.newssite {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: pink;
+  padding: 10px 20px 10px 20px;
+}
+
+.clear {
+  clear: left;
+}
+
+/**************************/
+/*  styles for about page */
+/**************************/
+
+body {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.name_container {
+  background-color: white;
+  width: 344px;
+  font-size: 2.5em;
+  padding: 20px 20px 20px 20px;
+}
+
+.content_container {
+  background-color: white;
+  max-width: 768px;
+}
+
+.image_container {
+  background-color: white;
+  height: 344px;
+  width: 344px;
+  float: left;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px 20px 20px 20px;
+}
+
+.bio_container {
+  background-color: white;
+  width: 344px;
+  float: left;
+  font-size: 1.5em;
+  text-align: left;
+  padding: 20px 20px 20px 20px;
+}
+
+.news_container {
+  background-color: white;
+  width: 344px;
+  padding: 20px 20px 20px 20px;
+}
+
+#greeting {
+  font-size: 2em;
+  margin: 1em;
+}
+
+#weather {
+  font-size: 2em;
+  margin: 1em;
+}
+
+#rss_items {
+  border: 1px solid black;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+}
+
+.rss_title {
+  font-size: 1.2em;
+}
+
+.rss_description {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+#sheet {
+  width: 640px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  border: 1px solid black;
+  padding: 5px 5px 5px 5px;
+  margin: 10px 10px 10px 10px;
+}
+
+.cell_name {
+  font-weight: bold;
+}
+
+.cell_address {
+
+}
+
+.cell_url {
+
+}
+
+.cell_phone {
+
+}
+
+#mapid {
+  height: 640px;
+  width: 640px;
+  border: 2px solid blue;
+}
